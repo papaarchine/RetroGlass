@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-blue-500 flex items-center justify-center">
-      <div className="bg-blue p-10 rounded-2xl shadow-lg text-center">
+    <div className="h-screen bg-white items-center justify-center">
+      <div className="bg-blue-500 h-1/3 p-10 shadow-lg text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to My Website</h1>
         <p className="text-gray-600 text-lg">This is a simple React homepage with Tailwind styling.</p>
         <div className="mt-6">
@@ -12,6 +12,13 @@ export default function Home() {
             Get Started
           </button>
         </div>
+       
+      </div> 
+      <div className="p-10 bg-pink-600 h-1/3">
+        <p className="text-gray-600 text-lg">This is a simple React homepage with Tailwind styling.</p> 
+      </div>
+      <div className="p-10 bg-purple-600 h-1/3">
+        <p className="text-gray-600 text-lg">This is a simple React homepage with Tailwind styling.</p> 
       </div>
     </div>
   );
