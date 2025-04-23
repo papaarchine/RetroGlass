@@ -6,7 +6,7 @@ export default function Intro2() {
 
     return (
         
-                <div className="w-full h-2/15 p-2 rounded-lg flex overflow-hidden shadow-md">
+                <div className="w-full h-2/15 p-2 rounded-lg flex overflow-hidden">
                     <img src={img1} className=""/>
                 </div>
     )
