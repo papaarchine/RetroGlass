@@ -5,7 +5,7 @@ import Intro from "../components/Intro";
 import Intro2 from "../components/Intro2";
 import Intro3 from "../components/Intro3";
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <div className="h-screen">
         <Hero/>

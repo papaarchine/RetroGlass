@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
     "@tailwindcss/vite": "^4.1.4",
+    "gsap": "^3.12.7",
+    "mdi": "^2.2.43",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
