@@ -25,8 +25,8 @@ export default function Work6() {
                 }
             });
 
-            tl.to(imag1.current, { y: -250 }, 0);
-            tl.to(imag2.current, { y: 250 }, 0);
+            tl.to(imag1.current, { x: -250 }, 0);
+            tl.to(imag2.current, { x: 250 }, 0);
         }, container);
         return () => context.revert();
     }, []);
