@@ -8,14 +8,19 @@ import Intro3 from "../components/Intro3";
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 p-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-10">
+      <div className="max-w-4xl mx-auto bg-white shadow-xl p-10">
         <h1 className="text-4xl font-bold mb-6 border-b pb-2">About Us</h1>
         
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
           <p className="text-base leading-relaxed">
-            We are dedicated to creating innovative solutions that make a positive impact on our community.
-            Our mission is to build with purpose, lead with compassion, and drive change through collaboration.
+          At Retro Glass Photography, we specialize in capturing moments that tell 
+          your unique story. Whether it's your graduation, a family gathering, a special 
+          celebration, or a creative project, we are here to preserve your memories with passion, 
+          creativity, and attention to detail. We believe every moment is worth capturing, and our 
+          mission is to bring out the true essence of those special times, so you can look back on 
+          them for years to come. From candid smiles to elegant portraits, we make sure your memories are 
+          always beautifully immortalized.
           </p>
         </section>
 
@@ -27,14 +32,7 @@ export default function About() {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Meet the Team</h2>
-          <ul className="list-disc ml-6">
-            <li>Alex – Founder & CEO</li>
-            <li>Jamie – Head of Product</li>
-            <li>Taylor – Community Manager</li>
-          </ul>
-        </section>
+        
       </div>
     </div>
   );
