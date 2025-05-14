@@ -4,11 +4,13 @@ import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
 import img1 from "/images/1O3A0397 copy.jpg";
 import img2 from "/images/1O3A5703.JPG";
+import Graduation from "../pages/Graduation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Work1() {
     const container = useRef(null);
+    const Graduation = useRef(null)
     const imag1 = useRef(null);
     const imag2 = useRef(null);
     const navigate = useNavigate();
@@ -31,15 +33,28 @@ export default function Work1() {
         return () => context.revert();
     }, []);
     
+    function HomeButton() {
+        const navigate = useNavigate();
+      
+        function handleClick() {
+          navigate("/Graduation");
+        }
+    }
 
     return (
         <div ref={container} className="w-full h-full bg-blue-500 flex justify-center items-center">
-            <div className="w-2/3 h-1/3 relative md:h-2/3 md:w-1/3 bg-red-400">
-            <img src={img2} className="h-full w-full object-cover object-[5%_20%]"/>
-                <div ref={imag1} className="absolute -bottom-1/3 -right-20 md:-right-1/2 h-1/2 w-3/4 bg-white bg-opacity-30">
+           
+           <div onClick={() => {
+              navigate("/Graduation")}}  
+              className="w-2/3 h-1/3 relative md:h-2/3 md:w-1/3 bg-red-400 group">
+                <div className=" transition delay-150 duration-300 ease-in-out hidden group-hover:flex md:text-3xl justify-center items-center absolute inset-0 z-10 text-white">
+                    Graduation
+                </div>
+                <img src={img2} className="z-0 h-full w-full object-cover object-[5%_20%]" />
+                <div ref={imag1} className="z-0 absolute -bottom-1/3 -right-20 md:-right-1/2 h-1/2 w-3/4 bg-white bg-opacity-30">
                     <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
                 </div>
-                <div ref ={imag2} className="absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-white bg-opacity-30">
+                <div ref ={imag2} className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-white bg-opacity-30">
                     <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
                 </div>
             </div>
