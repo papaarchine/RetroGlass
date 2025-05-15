@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
 import img1 from "/images/1O3A0397 copy.jpg";
 import img2 from "/images/1O3A5703.JPG";
+import Lifestyle from "../pages/Lifestyle";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Work2() {
@@ -31,17 +32,25 @@ export default function Work2() {
     }, []);
 
     return (
-        <div ref ={container} className="w-full h-full bg-blue-500 flex justify-center items-center ov erflow-hidden">
-            <div className="w-2/3 h-1/3 relative md:h-2/3 md:w-1/3 bg-red-400">
-                <img src={img2} className="h-full w-full object-cover object-[5%_20%]"/>
-                <div ref={imag1} className="absolute -bottom-1/3 -right-20 md:-right-1/2 h-1/2 w-3/4 bg-white bg-opacity-30">
-                    <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
+        <div ref={container} className="w-full h-full bg-blue-500 flex justify-center items-center">
+                   
+                   <div onClick={() => {
+                      navigate("/Lifestyle")}}  
+                      className="w-2/3 h-1/3 relative md:h-2/3 md:w-1/3 bg-red-400 group">
+                        <div className="opacity-0 group-hover:opacity-10 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto justify-center items-center absolute inset-0 text-white bg-black flex"> 
+                        </div>
+                        <p className="z-10 transition-opacity duration-300 top-0 flex justify-center items-center absolute inset-0 opacity-0 group-hover:opacity-100 md:text-3xl text-white">
+                            Lifestyle
+                        </p>
+                        <img src={img2} className="z-0 h-full w-full object-cover object-[5%_20%]" />
+                        <div ref={imag1} className="z-0 absolute -bottom-1/3 -right-20 md:-right-1/2 h-1/2 w-3/4 bg-white bg-opacity-30">
+                            <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
+                        </div>
+                        <div ref ={imag2} className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-white bg-opacity-30">
+                            <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div ref={imag2} className="absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-white bg-opacity-30">
-                    <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
-                </div>
-            </div>
-            
-        </div>
     )
 }
