@@ -8,9 +8,9 @@ export default function Portfolio_L() {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full h-full bg-blue-500 flex justify-center items-center terxt-3xl">
-            <p>
-                Hello
+        <div className="w-full h-full flex justify-center items-center terxt-3xl">
+            <p className="text-3xl">
+                Welcome To Our Portfolio
             </p>
             
         </div>

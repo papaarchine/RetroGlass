@@ -9,6 +9,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Portraits from "./pages/Portraits";
+import Lifestyle from "./pages/Lifestyle";
+import Sports from "./pages/Sports";
+import Corporate from "./pages/Corporate";
+import Graduation from "./pages/Graduation";
 
 
 export default function App() {
@@ -21,6 +26,11 @@ export default function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path ="/About" element={<About />} />
           <Route path ="/Portfolio" element={<Portfolio />} />
+          <Route path ="/Portraits" element={<Portraits />} />
+          <Route path ="/Lifestyle" element={<Lifestyle />} />
+          <Route path ="/Sports" element={<Sports />} />
+          <Route path ="/Corporate" element={<Corporate />} />
+          <Route path ="/Graduation" element={<Graduation />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
