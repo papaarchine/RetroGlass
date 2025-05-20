@@ -2,8 +2,9 @@ import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
-import img1 from "/images/1O3A0397 copy.jpg";
-import img2 from "/images/1O3A5703.JPG";
+import img1 from "/images/1O3A5703.JPG";
+import img2 from "/images/1O3A5702.JPG";
+import img3 from "/images/1O3A5773.JPG"
 import Sports from "../pages/Sports";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +47,7 @@ export default function Work3() {
                             <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
                         </div>
                         <div ref ={imag2} className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-opacity-30">
-                            <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
+                            <img src={img3} className="h-full w-full object-cover object-[5%_20%]"/>
                         </div>
                     </div>
                     
