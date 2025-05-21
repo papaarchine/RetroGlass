@@ -13,9 +13,13 @@
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "@tailwindcss/vite": "^4.1.4",
+    "card": "^2.5.4",
+    "framer-motion": "^12.12.1",
     "gsap": "^3.12.7",
     "mdi": "^2.2.43",
+    "motion": "^12.12.1",
     "react": "^19.0.0",
+    "react-components": "^0.5.1",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
