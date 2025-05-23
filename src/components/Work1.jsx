@@ -2,8 +2,8 @@ import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
-import img1 from "/images/1O3A0397 copy.jpg";
-import img2 from "/images/1O3A5703.JPG";
+import img2 from "/images/1O3A6461.JPG";
+import img1 from "/images/1O3A5703.JPG";
 import Graduation from "../pages/Graduation";
 
 gsap.registerPlugin(ScrollTrigger);

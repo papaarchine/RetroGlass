@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
 import img1 from "/images/1O3A0397 copy.jpg";
-import img2 from "/images/1O3A5703.JPG";
+import img2 from "/images/1O3A0357 copy.jpg";
 import Portraits from "../pages/Portraits";
 
 gsap.registerPlugin(ScrollTrigger);
