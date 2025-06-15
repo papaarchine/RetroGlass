@@ -7,22 +7,18 @@ import Intro3 from "../components/Intro3";
 import { useEffect } from "react";
 
 export default function Booking() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://square.site/appointments/buyer/widget/njn7agmh9zdnqd/LV7DSEA55ZKAF.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Optional cleanup if the script should be removed
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
-    <div>
-      {/* Square will replace this automatically */}
-      <div id="square-appointments"></div>
+    <div className="min-h-screen w-full bg-white flex justify-center items-start pt-10 px-4">
+      <iframe
+        src="https://square.site/book/LV7DSEA55ZKAF/njn7agmh9zdnqd"
+        style={{
+          width: "100%",
+          maxWidth: "1000px",
+          minHeight: "800px",
+          border: "none",
+        }}
+        title="Book an Appointment"
+      />
     </div>
   );
 }

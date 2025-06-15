@@ -39,6 +39,10 @@ export default function Header() {
       text: "CONTACT",
       route: "/Contact",
     },
+    {
+      text: "BOOKING",
+      route: "/Booking",
+    },
   ];
   return (
     <>
