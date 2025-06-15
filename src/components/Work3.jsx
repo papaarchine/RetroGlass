@@ -6,6 +6,8 @@ import img1 from "/images/1O3A5703.JPG";
 import img2 from "/images/1O3A5702.JPG";
 import img3 from "/images/1O3A5773.JPG"
 import Sports from "../pages/Sports";
+import { animation1 } from "./animaton1";
+import { ImageLoader } from "./ImageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,23 +17,14 @@ export default function Work3() {
   const imag2 = useRef(null);
   const navigate = useNavigate();
 
+  const { handleImageLoad, isReady } = ImageLoader(3); //image loader
+   
+   
   useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      tl.to(imag1.current, { x: -200, ease: "none" }, 0); // reduced offset
-      tl.to(imag2.current, { x: 200, ease: "none" }, 0);
-    }, container);
-
+    if (!isReady) return;
+    const context = animation1(container, imag1, imag2);
     return () => context.revert();
-  }, []);
+   }, [isReady]);
 
   return (
     <div

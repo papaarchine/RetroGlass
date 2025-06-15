@@ -6,6 +6,8 @@ import img1 from "/images/1O3A0397 copy.jpg";
 import img2 from "/images/1O3A5703.JPG";
 import img3 from "/images/1O3A5703.JPG";
 import Corporate from "../pages/Corporate";
+import { animation1 } from "./animaton1";
+import { ImageLoader } from "./ImageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,23 +17,14 @@ export default function Work5() {
   const imag2 = useRef(null);
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      tl.to(imag1.current, { x: -200, ease: "none" }, 0); // reduced offset
-      tl.to(imag2.current, { x: 200, ease: "none" }, 0);
-    }, container);
-
-    return () => context.revert();
-  }, []);
+  const { handleImageLoad, isReady } = ImageLoader(3); //image loader
+    
+    
+    useLayoutEffect(() => {
+      if (!isReady) return;
+      const context = animation1(container, imag1, imag2);
+      return () => context.revert();
+    }, [isReady]);
 
   return (
     <div
