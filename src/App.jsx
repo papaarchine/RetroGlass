@@ -14,6 +14,7 @@ import Lifestyle from "./pages/Lifestyle";
 import Sports from "./pages/Sports";
 import Corporate from "./pages/Corporate";
 import Graduation from "./pages/Graduation";
+import Booking from "./pages/Booking";
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
           <Route path ="/Sports" element={<Sports />} />
           <Route path ="/Corporate" element={<Corporate />} />
           <Route path ="/Graduation" element={<Graduation />} />
+          <Route path ="/Booking" element={<Booking />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
