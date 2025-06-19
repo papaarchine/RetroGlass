@@ -1,37 +1,98 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, {useState} from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import img1 from "/images/_O3A2254 copy.jpg"
+import img2 from "/images/1O3A5704.JPG"
+import img3 from "/images/1O3A5740.JPG"
+import { RiCloseLargeLine } from "react-icons/ri";
+import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
+
+
 
 const photos = [
   { id: 1, src: img1, alt: "Landscape 1" },
-  { id: 2, src: img1 , alt: "Portrait 1" },
-  { id: 3, src: "/images/photo3.jpg", alt: "Nature 1" },
-  { id: 4, src: "/images/photo4.jpg", alt: "Urban 1" },
-  { id: 5, src: "/images/photo5.jpg", alt: "Event 1" },
-  { id: 6, src: "/images/photo6.jpg", alt: "Abstract 1" },
-  { id: 7, src: "/images/photo6.jpg", alt: "Abstract 1" }
+  { id: 2, src: img2, alt: "Portrait 1" },
+  { id: 3, src: img3, alt: "Portrait 1" },
 ];
 
 export default function Sports() {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const closeModal = () => setSelectedIndex(null);
+
+  const goNext = () =>
+    setSelectedIndex((prev) => (prev + 1) % photos.length);
+
+  const goPrev = () =>
+    setSelectedIndex((prev) =>
+      prev === 0 ? photos.length - 1 : prev - 1
+    );
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">Sports</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">Lifestyle</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {photos.map((photo) => (
+        {photos.map((photo, index) => (
           <motion.div
             key={photo.id}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="shadow-lg overflow-hidden bg-white"
+            onClick={() => setSelectedIndex(index)}
+            className="cursor-pointer shadow-lg overflow-hidden bg-white"
           >
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-64 object-cover object-[5%_20%]"
+              className="w-full h-96 object-cover object-center"
             />
           </motion.div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeModal}
+          >
+            <motion.div
+              className="relative max-w-4xl w-full p-4"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+            >
+              <img
+                src={photos[selectedIndex].src}
+                alt={photos[selectedIndex].alt}
+                className="w-full h-auto rounded-lg"
+              />
+              <button
+                onClick={goPrev}
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl"
+              >
+                <FaChevronLeft />
+
+              </button>
+              <button
+                onClick={goNext}
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl"
+              >
+                <FaChevronRight />
+              </button>
+              <button
+                onClick={closeModal}
+                className="absolute top-9 right-9 text-white text-2xl"
+              >
+                <RiCloseLargeLine />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
