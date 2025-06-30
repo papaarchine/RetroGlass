@@ -30,7 +30,7 @@ export default function Sports() {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">Lifestyle</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">Sports</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {photos.map((photo, index) => (
           <motion.div
