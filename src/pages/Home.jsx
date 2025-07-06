@@ -7,7 +7,7 @@ import Intro3 from "../components/Intro3";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="">
         <Hero/>
         <Intro/>
         <Intro2/>

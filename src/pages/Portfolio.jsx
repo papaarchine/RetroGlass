@@ -10,7 +10,7 @@ import Work5 from "../components/Work5";
 export default function Portfolio() {
    
   return (
-    <div className="h-screen">
+    <div className="">
         <Portfolio_L/>
         <Work1/>
         <Work2/>

@@ -30,7 +30,7 @@ export default function Work1() {
   return (
       <div
         ref={container}
-        className="w-full h-full flex justify-center bg-black items-center"
+        className="w-full h-screen flex justify-center bg-black items-center"
       >
         {/* Optional Preloader UI */}
         {!isReady && (
