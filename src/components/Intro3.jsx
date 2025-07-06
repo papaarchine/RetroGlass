@@ -8,8 +8,8 @@ export default function Intro3() {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full h-screen p-2 rounded-lg flex-column overflow-hidden shadow-md">
-            <div className="h-1/2 flex w-full pt-2 overflow-hidden">
+        <div className="w-full h-screen pl-2 pr-2 flex-column overflow-hidden shadow-md">
+            <div className="h-1/2 flex w-full overflow-hidden">
                 <img src={img1} className="w-full md:w-1/3 object-cover"/>
                 <img src={img2} className="w-2/3 object-cover hidden md:block"/>
             </div>

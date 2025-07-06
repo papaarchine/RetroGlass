@@ -7,7 +7,7 @@ export default function Hero() {
 
     return (
         
-                <div className="w-full h-[33.333vh] rounded-lg flex ">
+                <div className="w-full h-[33.333vh] flex ">
                     <div className="w-full md:w-2/3 p-2 overflow-hidden object-cover h-full">
                         <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
                     </div>
