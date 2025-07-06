@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import Intro2 from "../components/Intro2";
 import Intro3 from "../components/Intro3";
+import img1 from "/images/523A77FC-DA51-4E55-A9AB-AD3DC015F9CC.JPG"
 
 export default function About() {
   return (
@@ -24,12 +25,9 @@ export default function About() {
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Our Story</h2>
-          <p className="text-base leading-relaxed">
-            Founded in 2020, we started as a small team of passionate individuals who believed that meaningful change
-            comes from collective effort. Today, we’ve grown into a diverse team with global impact.
-          </p>
+        <section className="">
+          
+          <img src={img1} />
         </section>
 
         

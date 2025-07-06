@@ -2,9 +2,9 @@ import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
-import img1 from "/images/1O3A0397 copy.jpg";
-import img2 from "/images/1O3A5703.JPG";
-import img3 from "/images/1O3A5703.JPG";
+import img1 from "/images/Head1.jpg";
+import img2 from "/images/Head2.JPG";
+import img3 from "/images/Head3.jpg";
 import Corporate from "../pages/Corporate";
 import { animation1 } from "./animaton1";
 import { ImageLoader } from "./ImageLoader";
@@ -34,7 +34,9 @@ export default function Work5() {
       >
         {/* Optional Preloader UI */}
         {!isReady && (
-          <div className="absolute z-50 text-white">Loading...</div>
+          <div className="absolute z-50 text-white">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white" />
+          </div>
         )}
   
         <div
@@ -73,7 +75,7 @@ export default function Work5() {
             className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-opacity-30"
           >
             <img
-              src={img3}
+              src={img2}
               alt="Decorative Layer 2"
               className="h-full w-full object-cover object-[50%_80%]"
               onLoad={handleImageLoad}

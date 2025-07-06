@@ -1,10 +1,8 @@
-// src/components/Preloader.jsx
-import React from "react";
 
 export default function Preloader() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black text-white">
-      <div className="text-2xl animate-pulse">Loading...</div>
+    <div className="flex items-center justify-center h-screen bg-black text-white">
+      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white" />
     </div>
   );
 }

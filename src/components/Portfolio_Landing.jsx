@@ -9,7 +9,7 @@ export default function Portfolio_L() {
 
     return (
         <div className="w-full h-full flex justify-center items-center terxt-3xl">
-            <p className="text-7xl">
+            <p className="text-7xl flex text-center">
                 Welcome To Our Portfolio
             </p>
             

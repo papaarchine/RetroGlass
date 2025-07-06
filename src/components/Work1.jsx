@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/all";
 import { useLayoutEffect, useRef, useState } from 'react';
 import img3 from "/images/1O3A6461.JPG";
-import img1 from "/images/1O3A5703.JPG";
-import img2 from "/images/1O3A5703.JPG";
+import img1 from "/images/GC2.jpg";
+import img2 from "/images/GC1.JPG";
 import Graduation from "../pages/Graduation";
 import { animation1 } from "./animaton1";
 import { ImageLoader } from "./ImageLoader";
@@ -34,7 +34,9 @@ export default function Work1() {
       >
         {/* Optional Preloader UI */}
         {!isReady && (
-          <div className="absolute z-50 text-white">Loading...</div>
+          <div className="absolute z-50 text-white">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white" />
+          </div>
         )}
   
         <div
@@ -62,7 +64,7 @@ export default function Work1() {
             <img
               src={img1}
               alt="Decorative Layer 1"
-              className="h-full w-full object-cover object-[60%_80%]"
+              className="h-full w-full object-cover object-[60%_60%]"
               onLoad={handleImageLoad}
             />
           </div>
@@ -73,9 +75,9 @@ export default function Work1() {
             className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-opacity-30"
           >
             <img
-              src={img3}
+              src={img2}
               alt="Decorative Layer 2"
-              className="h-full w-full object-cover object-[50%_80%]"
+              className="h-full w-full object-cover object-[50%_10%]"
               onLoad={handleImageLoad}
             />
           </div>

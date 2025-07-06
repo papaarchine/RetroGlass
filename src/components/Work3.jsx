@@ -34,7 +34,9 @@ export default function Work3() {
       >
         {/* Optional Preloader UI */}
         {!isReady && (
-          <div className="absolute z-50 text-white">Loading...</div>
+          <div className="absolute z-50 text-white">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white" />
+          </div>
         )}
   
         <div
@@ -73,9 +75,9 @@ export default function Work3() {
             className="z-0 absolute -top-1/4 -left-32 h-1/2 w-3/4 bg-opacity-30"
           >
             <img
-              src={img3}
+              src={img2}
               alt="Decorative Layer 2"
-              className="h-full w-full object-cover object-[50%_80%]"
+              className="h-full w-full object-cover object-[50%_40%]"
               onLoad={handleImageLoad}
             />
           </div>

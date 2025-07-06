@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "/images/_O3A2254 copy.jpg"
+import img1 from "/images/Sports1.jpg"
 import img2 from "/images/1O3A5704.JPG"
 import img3 from "/images/1O3A5740.JPG"
+import img4 from "/images/Sports2.JPG";
+import img5 from "/images/Sports3.jpg";
+import img6 from "/images/Sports4.jpg";
+import img7 from "/images/Sports5.JPG";
+import img8 from "/images/Sports6.JPG";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
@@ -13,6 +18,12 @@ const photos = [
   { id: 1, src: img1, alt: "Landscape 1" },
   { id: 2, src: img2, alt: "Portrait 1" },
   { id: 3, src: img3, alt: "Portrait 1" },
+  { id: 4, src: img4, alt: "Portrait 1" },
+  { id: 5, src: img5, alt: "Portrait 1" },
+  { id: 6, src: img6, alt: "Portrait 1" },
+  { id: 7, src: img7, alt: "Portrait 1" },
+  { id: 8, src: img8, alt: "Portrait 1" },
+
 ];
 
 export default function Sports() {
@@ -43,7 +54,7 @@ export default function Sports() {
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-96 object-cover object-center"
+              className="w-full h-full object-cover object-center"
             />
           </motion.div>
         ))}
@@ -59,7 +70,7 @@ export default function Sports() {
             onClick={closeModal}
           >
             <motion.div
-              className="relative max-w-4xl w-full p-4"
+              className="relative max-w-4xl p-4"
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -68,7 +79,7 @@ export default function Sports() {
               <img
                 src={photos[selectedIndex].src}
                 alt={photos[selectedIndex].alt}
-                className="w-full h-auto rounded-lg"
+                className="w-full md:h-full md:max-h-screen"
               />
               <button
                 onClick={goPrev}

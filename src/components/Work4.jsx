@@ -33,7 +33,9 @@ export default function Work4() {
     >
       {/* Optional Preloader UI */}
       {!isReady && (
-        <div className="absolute z-50 text-white">Loading...</div>
+        <div className="absolute z-50 text-white">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white" />
+        </div>
       )}
 
       <div

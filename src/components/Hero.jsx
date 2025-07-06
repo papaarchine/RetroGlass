@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import img1 from "/images/1O3A0397 copy.jpg"
-import img2 from "/images/1O3A5703.JPG"
+import img2 from "/images/Sports8.JPG"
 
 export default function Hero() {
     const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function Hero() {
                         <img src={img1} className="h-full w-full object-cover object-[5%_20%]"/>
                     </div>
                     <div className="hidden md:block w-1/3 h-full overflow-hidden p-2">
-                        <img src={img2} alt="" className="h-full w-full object-cover"/>
+                        <img src={img2} alt="" className="h-full w-full object-cover object-[60%_40%]"/>
                     </div>
                 </div>
     )

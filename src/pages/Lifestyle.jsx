@@ -1,32 +1,30 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "/images/1O3A0751.JPG"
-import img2 from "/images/1O3A9094.JPG"
-import img3 from "/images/_O3A2262 copy.jpg"
+import img1 from "/images/1O3A0751.JPG";
+import img2 from "/images/1O3A9094.JPG";
+import img3 from "/images/_O3A2262 copy.jpg";
+import img4 from "/images/Life1.JPG";
+import img5 from "/images/Life2.jpg";
+import img6 from "/images/Life3.JPG";
+import img7 from "/images/Life4.JPG";
 import { RiCloseLargeLine } from "react-icons/ri";
-import { FaChevronRight } from "react-icons/fa6";
-import { FaChevronLeft } from "react-icons/fa6";
-
-
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const photos = [
   { id: 1, src: img1, alt: "Landscape 1" },
   { id: 2, src: img2, alt: "Portrait 1" },
-  { id: 3, src: img3, alt: "Portrait 1" },
+  { id: 3, src: img4, alt: "Portrait 1" },
+  { id: 4, src: img5, alt: "Portrait 1" },
+  { id: 5, src: img6, alt: "Portrait 1" },
+  { id: 6, src: img7, alt: "Portrait 1" },
 ];
 
 export default function Lifestyle() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const closeModal = () => setSelectedIndex(null);
-
-  const goNext = () =>
-    setSelectedIndex((prev) => (prev + 1) % photos.length);
-
-  const goPrev = () =>
-    setSelectedIndex((prev) =>
-      prev === 0 ? photos.length - 1 : prev - 1
-    );
+  const goNext = () => setSelectedIndex((prev) => (prev + 1) % photos.length);
+  const goPrev = () => setSelectedIndex((prev) => (prev === 0 ? photos.length - 1 : prev - 1));
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -35,15 +33,16 @@ export default function Lifestyle() {
         {photos.map((photo, index) => (
           <motion.div
             key={photo.id}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 120 }}
             onClick={() => setSelectedIndex(index)}
-            className="cursor-pointer shadow-lg overflow-hidden bg-white"
+            className="cursor-pointer overflow-hidden bg-white"
           >
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-96 object-cover object-center"
+              loading="lazy"
+              className="w-full h-full object-cover object-center transition duration-300"
             />
           </motion.div>
         ))}
@@ -59,23 +58,22 @@ export default function Lifestyle() {
             onClick={closeModal}
           >
             <motion.div
-              className="relative max-w-4xl w-full p-4"
+              className="relative max-w-4xl p-4"
               onClick={(e) => e.stopPropagation()}
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              exit={{ scale: 0.95 }}
             >
               <img
                 src={photos[selectedIndex].src}
                 alt={photos[selectedIndex].alt}
-                className="w-full h-auto rounded-lg"
+                className="w-full md:h-full md:max-h-screen"
               />
               <button
                 onClick={goPrev}
                 className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl"
               >
                 <FaChevronLeft />
-
               </button>
               <button
                 onClick={goNext}

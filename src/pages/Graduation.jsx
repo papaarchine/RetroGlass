@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import img1 from "/images/1O3A6499.JPG";
 import img2 from "/images/1O3A0549.JPG";
+import img3 from "/images/Grad1.jpg";
+import img4 from "/images/Grad2.JPG";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
@@ -11,6 +13,8 @@ import { FaChevronLeft } from "react-icons/fa6";
 const photos = [
   { id: 1, src: img1, alt: "Landscape 1" },
   { id: 2, src: img2, alt: "Portrait 1" },
+  { id: 3, src: img3, alt: "Portrait 1" },
+  { id: 4, src: img4, alt: "Portrait 1" },
 ];
 
 export default function Graduation() {
@@ -41,7 +45,7 @@ export default function Graduation() {
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-120 object-cover object-center"
+              className="w-full h-full object-cover object-center"
             />
           </motion.div>
         ))}
@@ -57,7 +61,7 @@ export default function Graduation() {
             onClick={closeModal}
           >
             <motion.div
-              className="relative max-w-4xl w-full p-4"
+              className="relative max-w-4xl p-4"
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -66,7 +70,7 @@ export default function Graduation() {
               <img
                 src={photos[selectedIndex].src}
                 alt={photos[selectedIndex].alt}
-                className="w-full h-auto rounded-lg"
+                className="w-full md:h-full md:max-h-screen"
               />
               <button
                 onClick={goPrev}
